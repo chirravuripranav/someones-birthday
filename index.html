@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="section hero">
+    <h1>Happy Birthday 🎉</h1>
+    <p>Scroll slowly</p>
+  </section>
+
+  <!-- INTRO -->
+  <section class="section intro">
+    <h2>A small journey</h2>
+    <p>Made just for you</p>
+  </section>
+
+  <!-- GIFTS -->
+  <section class="section gifts">
+    <h2>Your Gifts</h2>
+    <div class="gift-grid">
+      <div class="gift-card" data-gift="story">🎁 A Story</div>
+      <div class="gift-card">🌸 A Memory</div>
+      <div class="gift-card">✨ A Wish</div>
+    </div>
+  </section>
+
+  <!-- STORY MODE -->
+  <section class="section story hidden">
+    <div id="storyContainer"></div>
+  </section>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <!-- MAIN SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
