@@ -5,7 +5,8 @@
 }
 
 body {
-  margin: 0; padding: 0;
+  margin: 0; 
+  padding: 0;
   background-color: var(--pink-bg);
   color: var(--text-dark);
   font-family: 'Poppins', sans-serif;
@@ -14,63 +15,244 @@ body {
 
 .hidden { display: none !important; }
 
+/* REVEAL OVERLAY */
 #reveal-overlay {
-  position: fixed; inset: 0;
+  position: fixed; 
+  inset: 0;
   background: radial-gradient(circle, var(--rose), var(--pink-bg));
-  display: flex; justify-content: center; align-items: center; z-index: 10000;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  z-index: 10000;
 }
 
 #reveal-btn {
-  background: white; color: var(--text-dark);
-  padding: 15px 35px; border-radius: 50px; border: none; font-weight: 600; cursor: pointer;
+  background: white; 
+  color: var(--text-dark);
+  padding: 15px 35px; 
+  border-radius: 50px; 
+  border: none; 
+  font-weight: 600; 
+  cursor: pointer;
 }
 
+/* NAVIGATION */
 nav {
-  position: fixed; top: 0; width: 100%; height: 70px;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  height: 70px;
   background-color: var(--pink-bg);
-  display: flex; align-items: center; padding: 0 30px; z-index: 1000;
+  display: flex; 
+  align-items: center; 
+  padding: 0 30px; 
+  z-index: 1000;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo { font-size: 1.5rem; cursor: pointer; font-weight: 600; }
+.logo { 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  font-weight: 600; 
+}
 
-.hero { position: relative; height: 100vh; background: #000; }
-.spline-container { position: absolute; inset: 0; z-index: 1; }
-.hero-overlay { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
-.hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); color: white; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-.hero p { color: white; }
+/* HERO SECTION */
+.hero { 
+  position: relative; 
+  height: 100vh; 
+  background: #000; 
+}
 
-.gifts-section { padding: 100px 20px; text-align: center; background-color: var(--pink-bg); }
-.gift-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto; }
-.gift-card { flex: 1; min-width: 250px; padding: 40px; background: white; border: 1px solid var(--rose); border-radius: 20px; cursor: pointer; transition: 0.3s; }
-.gift-card:hover { background: var(--rose); color: white; transform: translateY(-10px); }
+.spline-container { 
+  position: absolute; 
+  inset: 0; 
+  z-index: 1; 
+}
 
-.sub-page { min-height: 100vh; padding: 120px 20px; background-color: var(--pink-bg); }
-.content-limit { max-width: 800px; margin: 0 auto; text-align: center; }
+.hero-overlay { 
+  position: relative; 
+  z-index: 2; 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  pointer-events: none; 
+}
 
-.moon-black, .mirror-black { background-color: #000 !important; color: #fff; }
-.static-moon { width: 100%; max-width: 450px; filter: drop-shadow(0 0 20px rgba(255,255,255,0.3)); margin: 40px 0; }
-.moon-text, .mirror-footer { font-size: 1.2rem; line-height: 1.6; color: var(--pink-bg); }
+.hero h1 { 
+  font-size: clamp(2.5rem, 8vw, 4rem); 
+  color: white; 
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5); 
+}
 
-.story-block { margin-bottom: 80px; background: white; padding: 35px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.story-block p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px; }
-.story-block img { width: 100%; border-radius: 20px; border: 3px solid var(--pink-bg); }
+.hero p { 
+  color: white; 
+}
 
-/* MINDMAP STYLES */
-.mindmap-wrapper { position: relative; width: 100%; height: 500px; margin: 20px auto; }
-.mindmap-svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-.mirror-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000; border: 3px solid #fff; padding: 10px 30px; font-size: 1.8rem; font-weight: 600; letter-spacing: 5px; z-index: 10; }
-.trait-node { position: absolute; background: #000; border: 1.5px solid #fff; border-radius: 8px; padding: 5px 12px; font-size: 0.75rem; z-index: 5; color: var(--pink-bg); }
+/* GIFTS SECTION */
+.gifts-section { 
+  padding: 100px 20px; 
+  text-align: center; 
+  background-color: var(--pink-bg); 
+}
 
-/* Node Positions */
-.t-protective { top: 12%; left: 15%; } .t-rare { top: 15%; left: 45%; border-color: var(--rose); }
-.t-honest { top: 10%; left: 65%; } .t-emotional { top: 25%; left: 78%; }
-.t-sensitive { top: 48%; left: 85%; } .t-humble { top: 68%; left: 82%; }
-.t-genuine { top: 82%; left: 68%; } .t-pure { top: 88%; left: 58%; }
-.t-overthinker { top: 92%; left: 42%; } .t-kind { top: 85%; left: 32%; }
-.t-m-strong { top: 78%; left: 10%; } .t-peaceful { top: 62%; left: 3%; }
-.t-divine { top: 45%; left: 5%; } .t-spiritual { top: 28%; left: 0%; }
-.t-loyal { top: 38%; left: 18%; } .t-caring { top: 25%; left: 12%; }
+.gift-grid { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 30px; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
 
-.back-btn { margin-top: 50px; background: var(--text-dark); color: white; padding: 14px 40px; border-radius: 30px; border: none; font-weight: 600; cursor: pointer; transition: 0.3s; }
-footer { text-align: center; padding: 40px; opacity: 0.6; font-size: 0.9rem; }
+.gift-card { 
+  flex: 1; 
+  min-width: 250px; 
+  padding: 40px; 
+  background: white; 
+  border: 1px solid var(--rose); 
+  border-radius: 20px; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+
+.gift-card:hover { 
+  background: var(--rose); 
+  color: white; 
+  transform: translateY(-10px); 
+}
+
+.card-icon { 
+  font-size: 2.5rem; 
+  margin-bottom: 10px; 
+}
+
+/* SUB PAGES */
+.sub-page { 
+  min-height: 100vh; 
+  padding: 120px 20px; 
+  background-color: var(--pink-bg); 
+}
+
+.content-limit { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+/* SPECIAL BLACK PAGES (Moon and Mirror) */
+.moon-black, .mirror-black { 
+  background-color: #000 !important; 
+  color: #fff; 
+}
+
+.static-moon { 
+  width: 100%; 
+  max-width: 450px; 
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.3)); 
+  margin: 40px 0; 
+}
+
+.moon-text, .mirror-footer { 
+  font-size: 1.2rem; 
+  line-height: 1.6; 
+  color: var(--pink-bg); 
+}
+
+/* STORY CONTENT */
+.story-block { 
+  margin-bottom: 80px; 
+  background: white; 
+  padding: 35px; 
+  border-radius: 30px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+
+.story-block p { 
+  font-size: 1.1rem; 
+  line-height: 1.8; 
+  margin-bottom: 25px; 
+}
+
+.story-block img { 
+  width: 100%; 
+  border-radius: 20px; 
+  border: 3px solid var(--pink-bg); 
+}
+
+/* MINDMAP / MIRROR LAYOUT */
+.mindmap-wrapper { 
+  position: relative; 
+  width: 100%; 
+  height: 500px; 
+  margin: 20px auto; 
+}
+
+.mindmap-svg { 
+  position: absolute; 
+  inset: 0; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 1; 
+}
+
+.mirror-center { 
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background: #000; 
+  border: 3px solid #fff; 
+  padding: 10px 30px; 
+  font-size: 1.8rem; 
+  font-weight: 600; 
+  letter-spacing: 5px; 
+  z-index: 10; 
+}
+
+.trait-node { 
+  position: absolute; 
+  background: #000; 
+  border: 1.5px solid #fff; 
+  border-radius: 8px; 
+  padding: 5px 12px; 
+  font-size: 0.75rem; 
+  z-index: 5; 
+  color: var(--pink-bg); 
+}
+
+/* Rani's Traits - Node Positions */
+.t-protective { top: 12%; left: 15%; } 
+.t-rare       { top: 15%; left: 45%; border-color: var(--rose); }
+.t-honest     { top: 10%; left: 65%; } 
+.t-emotional  { top: 25%; left: 78%; }
+.t-sensitive  { top: 48%; left: 85%; } 
+.t-humble     { top: 68%; left: 82%; }
+.t-genuine    { top: 82%; left: 68%; } 
+.t-pure       { top: 88%; left: 58%; }
+.t-overthinker{ top: 92%; left: 42%; } 
+.t-kind       { top: 85%; left: 32%; }
+.t-m-strong   { top: 78%; left: 10%; } 
+.t-peaceful   { top: 62%; left: 3%; }
+.t-divine     { top: 45%; left: 5%; } 
+.t-spiritual  { top: 28%; left: 0%; }
+.t-loyal      { top: 38%; left: 18%; } 
+.t-caring     { top: 25%; left: 12%; }
+
+/* UTILITY */
+.back-btn { 
+  margin-top: 50px; 
+  background: var(--text-dark); 
+  color: white; 
+  padding: 14px 40px; 
+  border-radius: 30px; 
+  border: none; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: 0.3s; 
+}
+
+.back-btn:hover { 
+  opacity: 0.8; 
+}
