@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Rani 💗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<div id="reveal-overlay">
+  <button id="reveal-btn">Enter the virtual world 💫</button>
+</div>
+
+<audio id="bg-music" loop>
+  <source src="sounds/interstellar.mp3" type="audio/mpeg">
+</audio>
+
+<nav>
+  <div class="logo" onclick="hideSections()"> its a special day</div>
+</nav>
+
+<div id="main-wrapper">
+  <section class="hero">
+    <div class="spline-container">
+      <iframe src='https://my.spline.design/textfromballoonswithinteractiveanimation-nDs9Kbmmw9k0AiEj3j63VUrg/' frameborder='0' width='100%' height='100%'></iframe>
+    </div>
+    <div class="hero-overlay">
+      <h1 class="reveal-text"></h1>
+      <p class="reveal-text"></p>
+    </div>
+  </section>
+
+  <section class="gifts-section">
+    <h2 class="reveal-text">Celestial Treasures</h2>
+    <div class="gift-grid">
+      <div class="gift-card" onclick="showSection('story-page')">
+        <div class="card-icon">📖</div>
+        <h3> Story</h3>
+      </div>
+      <div class="gift-card" onclick="showSection('moon-page')">
+        <div class="card-icon">🌙</div>
+        <h3>Birth Moon</h3>
+      </div>
+      <div class="gift-card" onclick="showSection('mirror-page')">
+        <div class="card-icon">🪞</div>
+        <h3>The Mirror</h3>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="story-page" class="sub-page hidden">
+  <div class="content-limit">
+    <h1></h1>
+    <div class="story-block">
+      <p>It was late at night.
+
+The bus moved quietly through empty roads, its lights cutting through the darkness.
+She sat by the window, earphones in, watching the world slide past her eyes.
+There were only a few people in the bus, far away from her — everyone lost in their own silence.
+
+She looked tired.
+
+
+At 11:54 PM, the bus slowed.
+      <img src="images/story/panel01.png">
+    </div>
+    <div class="story-block">
+      <p>She stood up calmly, held her bag, and stepped down onto the road.
+
+The bus left.
+
+And suddenly, everything felt quieter. The night air was cool against her skin. The streetlights cast a soft glow on the wet pavement. She began to walk.</p>
+      <img src="images/story/panel05.png">
+    </div>
+    <div class="story-block">
+      <p>she noticed it.
+
+A soft pink glow on the road ahead.
+
+She stopped.
+
+At first, she thought it was just light playing tricks on her tired eyes.
+But the glow didn’t disappear.
+
+She walked closer…
+knelt down…
+and reached out.
+
+In her hand lay a small, glowing pink diamond — warm, gentle, alive.
+      <img src="images/story/panel11.png">
+      <img src="images/story/panel12.png" style="margin-top:20px;">
+    </div>
+    <div class="story-block">
+      <p>And then, quietly, it changed.
+
+The diamond unfolded into a pink butterfly, glowing softly against the night.
+
+It fluttered up and rested gently on her nose.
+
+For the first time that night, she smiled.
+
+The butterfly lifted off and flew toward the trees nearby.
+
+She didn’t follow at first.
+
+She watched it circle once…
+then again — as if asking her to come along.
+
+She hesitated.
+      <img src="images/story/panel16.png">
+    </div>
+    <div class="story-block">
+      <p>But something inside her said it was okay.
+
+So she followed.
+
+The path grew darker.
+The sounds of the night grew louder.
+Trees surrounded her, and the familiar road was gone.
+
+Fear crept in.
+
+She stopped.
+
+Turned back.
+
+But the way she came from had disappeared.
+
+Her breath grew heavy.
+Her knees weakened.
+She sat down on the ground, unsure, overwhelmed.
+
+That’s when the butterfly returned.
+
+It circled her gently — not rushing her — just reminding her she wasn’t alone.
+
+She stood up.
+
+And trusted it.
+
+As she walked forward, the darkness slowly filled with light.
+
+One butterfly became many.
+
+Then dozens.
+
+Then hundreds.
+
+Pink glowing butterflies filled the air, dancing softly around her.</p>
+      <img src="images/story/panel22.png">
+      <img src="images/story/panel37.png" style="margin-top:20px;">
+    </div>
+    <div class="story-block">
+      <p>
+        Ahead, they gathered around something glowing brightly.
+
+She reached out…
+
+And when she touched it —
+
+The world changed.
+
+Greenery bloomed around her.
+Waterfalls flowed softly.
+The air felt warm, calm, safe.
+
+Bells rang gently in the distance.
+
+The sky shifted.
+
+It was 12:00 AM.
+
+January 28th.
+      <img src="images/story/panel38.png">
+      <img src="images/story/panel40.png" style="margin-top:20px;">
+    </div>
+    <div class="story-block">
+      <p>Lotus petals began to fall from above.
+
+And in the sky, written softly among the clouds, were the words:
+
+Happy Birthday
+
+In front of her stood a small table.
+
+A cake.
+
+A letter.
+
+Animals gathered peacefully — peacocks, birds — celebrating quietly, as if they had been waiting for her.
+
+She lit the candle.
+
+Closed her eyes.
+
+And smiled.
+
+
+
+      <img src="images/story/panel41.png">
+      <img src="images/story/panel43.png" style="margin-top:20px;">
+    </div>
+    <div class="story-block">
+      <p>She opened the letter.
+
+It read:
+
+Happy Birthday to you.
+May this year bring you success, peace, and happiness.
+May peace and happiness find you again and again,
+just like these pink glowing butterflies.
+
+— someone
+
+
+
+
+
+She laughed softly... suddenly with an unexpected sound she opened her eyes,she was in home actually ,she couldnt believe it for sometime, was it all a dream ? the time was exactly 12 am ,28th january of 2026 , she felt that dream was actually true,her taste buds in her mouth are still tingling with the same taste of the cake which she had a little amount in her dream , she saw a cake on the table infront of her with a small note on it , she opened the note it was same as the one in her dream.
+      <img src="images/story/panel49.png">
+      <img src="images/story/panel50.png" style="margin-top:20px;">
+    </div>
+    <div class="story-block">
+      <p>Happy Birthday, Rani...</p>
+      <img src="images/story/panel51.png">
+    </div>
+    <button class="back-btn" onclick="hideSections()">Back to Home</button>
+  </div>
+</section>
+
+<section id="moon-page" class="sub-page moon-black hidden">
+  <div class="content-limit">
+    <h1 style="color: white;">The Night You Were Born</h1>
+    <div class="moon-frame">
+        <img src="traits/waxinggibbousmoon.jpg" alt="Waxing Gibbous" class="static-moon">
+    </div>
+    <p class="moon-text" style="color: #F0D4E9;">On January 28th, the moon looked like this , this phase of moon is called waxing gibbous . a waxing gibbous moon phase is a phase where the moon is 85 percent full and is the way of becoming full moon . you were born under this beautiful moon phase which signifies growth .</p>
+    <button class="back-btn" onclick="hideSections()">Back</button>
+  </div>
+</section>
+
+<section id="mirror-page" class="sub-page mirror-black hidden">
+  <div class="content-limit">
+    <h1 class="mirror-title">Who is she?</h1>
+    <div class="mindmap-wrapper">
+      <div class="mirror-center">RANI</div>
+      <svg class="mindmap-svg" viewBox="0 0 800 500">
+        <g stroke="#ff85a2" stroke-width="2">
+          <line x1="400" y1="250" x2="200" y2="80" /> <line x1="400" y1="250" x2="400" y2="100" />
+          <line x1="400" y1="250" x2="600" y2="80" /> <line x1="400" y1="250" x2="700" y2="150" />
+          <line x1="400" y1="250" x2="720" y2="250" /> <line x1="400" y1="250" x2="700" y2="350" />
+          <line x1="400" y1="250" x2="600" y2="420" /> <line x1="400" y1="250" x2="500" y2="450" />
+          <line x1="400" y1="250" x2="350" y2="460" /> <line x1="400" y1="250" x2="250" y2="440" />
+          <line x1="400" y1="250" x2="120" y2="400" /> <line x1="400" y1="250" x2="80" y2="320" />
+          <line x1="400" y1="250" x2="80" y2="240" /> <line x1="400" y1="250" x2="100" y2="160" />
+          <line x1="400" y1="250" x2="180" y2="200" /> <line x1="400" y1="250" x2="220" y2="140" />
+        </g>
+      </svg>
+      <div class="trait-node t-protective">PROTECTIVE</div> <div class="trait-node t-rare">RARE</div>
+      <div class="trait-node t-honest">HONEST</div> <div class="trait-node t-emotional">EMOTIONAL</div>
+      <div class="trait-node t-sensitive">SENSITIVE</div> <div class="trait-node t-humble">HUMBLE</div>
+      <div class="trait-node t-genuine">GENUINE</div> <div class="trait-node t-pure">PURE</div>
+      <div class="trait-node t-overthinker">OVERTHINKER</div> <div class="trait-node t-kind">KIND</div>
+      <div class="trait-node t-m-strong">MENTALLY STRONG</div> <div class="trait-node t-peaceful">PEACEFUL</div>
+      <div class="trait-node t-divine">DIVINE</div> <div class="trait-node t-spiritual">SPIRITUAL</div>
+      <div class="trait-node t-loyal">LOYAL</div> <div class="trait-node t-caring">CARING</div>
+    </div>
+    <p class="mirror-footer">This mirror reflects your soul
+      These words dont define her.They descibe how she moves through the world , each word stands on its own , yet together they form something rare = Rani</p>
+    <button class="back-btn" onclick="hideSections()">Back</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
