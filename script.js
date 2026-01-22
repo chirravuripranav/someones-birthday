@@ -73,7 +73,7 @@ function loadStory() {
     const p = document.createElement("div"); p.className = "panel";
     const img = document.createElement("img");
     img.src = `images/story/panel${String(i).padStart(2, "0")}.png`;
-    img.loading = "lazy";
+    
     p.appendChild(img); container.appendChild(p);
     gsap.from(img, { opacity: 0, y: 20, scrollTrigger: { trigger: p, start: "top 85%" } });
   }
