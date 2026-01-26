@@ -14,22 +14,25 @@ body {
 
 .hidden { display: none !important; }
 
+/* LOADER */
+#loader-wrapper {
+  position: fixed; inset: 0; background: #000;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 20000; transition: opacity 1s ease;
+}
+.loader-letter { font-size: 5rem; font-weight: 600; color: var(--rose); text-shadow: 0 0 20px var(--rose); animation: pulseR 2s infinite ease-in-out; }
+@keyframes pulseR { 0%, 100% { transform: scale(1); opacity: 0.5; } 50% { transform: scale(1.2); opacity: 1; } }
+
 #reveal-overlay {
-  position: fixed; inset: 0;
-  background: radial-gradient(circle, var(--rose), var(--pink-bg));
+  position: fixed; inset: 0; background: radial-gradient(circle, var(--rose), var(--pink-bg));
   display: flex; justify-content: center; align-items: center; z-index: 10000;
 }
 
-#reveal-btn {
-  background: white; color: var(--text-dark);
-  padding: 15px 35px; border-radius: 50px; border: none; font-weight: 600; cursor: pointer;
-}
+#reveal-btn { background: white; color: var(--text-dark); padding: 15px 35px; border-radius: 50px; border: none; font-weight: 600; cursor: pointer; }
 
 nav {
-  position: fixed; top: 0; width: 100%; height: 70px;
-  background-color: var(--pink-bg);
-  display: flex; align-items: center; padding: 0 30px; z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: fixed; top: 0; width: 100%; height: 70px; background-color: var(--pink-bg);
+  display: flex; align-items: center; padding: 0 30px; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo { font-size: 1.5rem; cursor: pointer; font-weight: 600; }
@@ -38,35 +41,39 @@ nav {
 .spline-container { position: absolute; inset: 0; z-index: 1; }
 .hero-overlay { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; pointer-events: none; }
 .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); color: white; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-.hero p { color: white; }
 
-.gifts-section { padding: 100px 20px; text-align: center; background-color: var(--pink-bg); }
+/* BRIDGE SECTION */
+.mid-bridge { position: relative; padding: 120px 20px; background-color: var(--pink-bg); overflow: hidden; display: flex; justify-content: center; }
+.watermark-r { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: clamp(15rem, 50vw, 30rem); font-weight: 600; color: var(--rose); opacity: 0.07; z-index: 1; pointer-events: none; }
+.birthday-letter { position: relative; z-index: 2; background: rgba(255, 255, 255, 0.4); backdrop-filter: blur(10px); padding: 50px 40px; border-radius: 40px; border: 1px solid rgba(255, 255, 255, 0.5); }
+.bridge-tag { font-size: 0.85rem; letter-spacing: 5px; text-transform: uppercase; color: var(--rose); margin-bottom: 20px; font-weight: 600; text-align: center; }
+.birthday-letter p { font-size: clamp(1rem, 3.5vw, 1.15rem); line-height: 1.8; color: var(--text-dark); margin-bottom: 20px; font-weight: 300; text-align: center; }
+
+.gifts-section { padding: 100px 20px; text-align: center; }
 .gift-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1000px; margin: 0 auto; }
-.gift-card { flex: 1; min-width: 250px; padding: 40px; background: white; border: 1px solid var(--rose); border-radius: 20px; cursor: pointer; transition: 0.3s; }
+.gift-card { flex: 1; min-width: 250px; padding: 40px; background: rgba(255,255,255,0.4); backdrop-filter: blur(10px); border: 1px solid var(--rose); border-radius: 20px; cursor: pointer; transition: 0.3s; }
 .gift-card:hover { background: var(--rose); color: white; transform: translateY(-10px); }
 
 .sub-page { min-height: 100vh; padding: 120px 20px; background-color: var(--pink-bg); }
 .content-limit { max-width: 800px; margin: 0 auto; text-align: center; }
 
-/* MOON PAGE: Fixed Image, No Glow */
-.moon-black { background-color: #000 !important; }
-.static-moon { width: 100%; max-width: 450px; filter: none; margin: 40px 0; }
-.moon-text { font-size: 1.2rem; line-height: 1.6; color: var(--pink-bg); }
+/* MOON & MIRROR STARS */
+.moon-black, .mirror-black { background-color: #000 !important; color: #fff; position: relative; overflow: hidden; }
+.moon-black::before, .mirror-black::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(1px 1px at 20px 30px, #fff, transparent), radial-gradient(1.5px 1.5px at 100px 150px, #fff, transparent); background-size: 400px 400px; opacity: 0.3; animation: twinkleStars 5s linear infinite; }
+@keyframes twinkleStars { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.5; } }
 
-/* MIRROR PAGE: Now Pink BG */
-.mirror-title { font-weight: 600; color: var(--text-dark); margin-bottom: 40px; }
+.static-moon { width: 100%; max-width: 450px; margin: 40px 0; }
+.moon-text, .mirror-footer { font-size: 1.2rem; line-height: 1.6; color: var(--pink-bg); position: relative; z-index: 1; }
+
+.story-block { margin-bottom: 80px; background: rgba(255,255,255,0.4); backdrop-filter: blur(10px); padding: 35px; border-radius: 30px; }
+.story-block img { width: 100%; border-radius: 20px; margin-top: 20px; }
+
 .mindmap-wrapper { position: relative; width: 100%; height: 500px; margin: 20px auto; }
 .mindmap-svg { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 1; }
-.mirror-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--pink-bg); border: 2px solid var(--text-dark); padding: 10px 30px; font-size: 1.8rem; font-weight: 600; letter-spacing: 5px; z-index: 10; color: var(--text-dark); }
-.trait-node { position: absolute; background: white; border: 1px solid var(--rose); border-radius: 8px; padding: 5px 12px; font-size: 0.75rem; z-index: 5; color: var(--text-dark); }
-.mirror-footer { font-size: 1.1rem; line-height: 1.6; color: var(--text-dark); margin-top: 20px; font-weight: 300; }
+.mirror-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #ff85a2; border: 2px solid #fff; padding: 10px 30px; font-size: 1.8rem; font-weight: 600; letter-spacing: 5px; z-index: 10; }
+.trait-node { position: absolute; background: #000300; border: 1.5px solid #fff; border-radius: 8px; padding: 5px 12px; font-size: 0.75rem; z-index: 5; color: var(--pink-bg); }
 
-/* STORY CONTENT */
-.story-block { margin-bottom: 80px; background: white; padding: 35px; border-radius: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-.story-block p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 25px; }
-.story-block img { width: 100%; border-radius: 20px; border: 3px solid var(--pink-bg); }
-
-/* Rani's Traits - Node Positions */
+/* Traits Positions */
 .t-protective { top: 12%; left: 15%; } .t-rare { top: 15%; left: 45%; border-color: var(--rose); }
 .t-honest { top: 10%; left: 65%; } .t-emotional { top: 25%; left: 78%; }
 .t-sensitive { top: 48%; left: 85%; } .t-humble { top: 68%; left: 82%; }
@@ -76,4 +83,4 @@ nav {
 .t-divine { top: 45%; left: 5%; } .t-spiritual { top: 28%; left: 0%; }
 .t-loyal { top: 38%; left: 18%; } .t-caring { top: 25%; left: 12%; }
 
-.back-btn { margin-top: 50px; background: var(--text-dark); color: white; padding: 14px 40px; border-radius: 30px; border: none; font-weight: 600; cursor: pointer; transition: 0.3s; }
+.back-btn { margin-top: 50px; background: var(--text-dark); color: white; padding: 14px 40px; border-radius: 30px; border: none; font-weight: 600; cursor: pointer; position: relative; z-index: 1; }
